@@ -24,7 +24,7 @@ DUTS
     
    └─DUTS-TR-Mask
     
-3. Unzip this project and run:
+2. Unzip this project and run:
 ```python
 cd ./tools
 python make_datasets_DUTS.py --mode='TR' --data_root='./xxxx/DUTS' --out_dir_name='DUTS_MFF' #Training set
