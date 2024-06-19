@@ -31,9 +31,8 @@ python make_datasets_DUTS.py --mode='TR' --data_root='./xxxx/DUTS' --out_dir_nam
 python make_datasets_DUTS.py --mode='TE' --data_root='./xxxx/DUTS' --out_dir_name='DUTS_MFF' #Validation set
 cd ..
 ```
-## Fine-tuning a model
-1. Before fine-tuning, please make sure the last output layer should be normalized to 0 to 1! Pleause use gpu device.
-2. Prepare three datasets for visualization
+## Pre-training a model
+1. Prepare three datasets for visualization
 
 three_datasets_MFF
 ├─Lytro
@@ -54,7 +53,14 @@ three_datasets_MFF
 
 │  ├─B
 
-3. run
+```python
+python train_1.py --dataset_path='/tools/DUTS_MFF' --Visualization_datasets='/three_datasets_MFF'
+```
+
+## Fine-tuning a model
+1. Before fine-tuning, please make sure the last output layer should be normalized to 0 to 1! Pleause use gpu device.
+
+2. run
    
 ```python
 python train_2.py --dataset_path='/tools/DUTS_MFF' --pretrained_model='./xxxx.pth'#your model path
