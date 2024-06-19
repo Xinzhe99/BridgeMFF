@@ -63,7 +63,7 @@ python train_1.py --dataset_path='/tools/DUTS_MFF' --Visualization_datasets='/th
 2. run
    
 ```python
-python train_2.py --dataset_path='/tools/DUTS_MFF' --pretrained_model='./xxxx.pth'#your model path
+python train_2.py --dataset_path='/tools/DUTS_MFF' --pretrained_model='./xxxx.pth' --Visualization_datasets='/three_datasets_MFF'
 ```
 ## Predict using our model
 
