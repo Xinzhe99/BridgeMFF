@@ -51,26 +51,6 @@ three_datasets_MFF
 python train_2.py --dataset_path='/tools/DUTS_MFF' --pretrained_model='./xxxx.pth'#your model path
 ```
 ## Predict using our model
-three_datasets_MFF
-├─Lytro
-
-│  ├─A
-
-│  └─B
-
-├─MFFW
-
-│  ├─A
-
-│  └─B
-
-├─MFI-WHU
-
-│  ├─A
-
-│  ├─B
-
-│  └─full_clear
 
 ```python
 python predict.py --model_path='./generator.pth' --test_dataset_path=r'/three_datasets_MFF/Lytro'#Lytro
