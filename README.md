@@ -27,8 +27,8 @@ DUTS
 2. Unzip this project and run:
 ```python
 cd ./tools
-python make_datasets_DUTS.py --mode='TR' --data_root='./xxxx/DUTS' --out_dir_name='DUTS_MFF' #Training set
-python make_datasets_DUTS.py --mode='TE' --data_root='./xxxx/DUTS' --out_dir_name='DUTS_MFF' #Validation set
+python make_datasets_DUTS.py --mode='TR' --data_root='/xxxx/DUTS' --out_dir_name='DUTS_MFF' #Training set
+python make_datasets_DUTS.py --mode='TE' --data_root='/xxxx/DUTS' --out_dir_name='DUTS_MFF' #Validation set
 cd ..
 ```
 ## Pre-training a model
@@ -63,14 +63,14 @@ python train_1.py --dataset_path='/tools/DUTS_MFF' --Visualization_datasets='/th
 2. run
    
 ```python
-python train_2.py --dataset_path='/tools/DUTS_MFF' --pretrained_model='./xxxx.pth' --Visualization_datasets='/three_datasets_MFF'
+python train_2.py --dataset_path='/tools/DUTS_MFF' --pretrained_model='/xxxx.pth' --Visualization_datasets='/three_datasets_MFF'
 ```
 ## Predict using our model
 
 run
 
 ```python
-python predict.py --model_path='./generator.pth' --test_dataset_path=r'/three_datasets_MFF/Lytro'#Lytro
-python predict.py --model_path='./generator.pth' --test_dataset_path=r'/three_datasets_MFF/MFFW'#MFFW
-python predict.py --model_path='./generator.pth' --test_dataset_path=r'/three_datasets_MFF/MFI-WHU'#MFI-WHU
+python predict.py --model_path='/generator.pth' --test_dataset_path=r'/three_datasets_MFF/Lytro'#Lytro
+python predict.py --model_path='/generator.pth' --test_dataset_path=r'/three_datasets_MFF/MFFW'#MFFW
+python predict.py --model_path='/generator.pth' --test_dataset_path=r'/three_datasets_MFF/MFI-WHU'#MFI-WHU
 ```
