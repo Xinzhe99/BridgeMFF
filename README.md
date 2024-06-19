@@ -1,5 +1,11 @@
 # BridgeMFF
 Code for “BridgeMFF: Bridging the semantic and texture gap via dual adversarial learning for multi-focus image fusion”
+## Framework
+![image](https://github.com/Xinzhe99/BridgeMFF/assets/113503163/17d21d4f-720a-4472-92ac-0ba9e90eb935)
+
+## Performance on Lytro dataset
+![image](https://github.com/Xinzhe99/BridgeMFF/assets/113503163/5751cc4c-e3d7-47b5-b401-a0dd557e1372)
+
 ## Preparing the virtual environment using conda
 Please refer [UltraLight-VM-UNet](https://github.com/wurenkai/UltraLight-VM-UNet)
 ## Creating our training dataset
