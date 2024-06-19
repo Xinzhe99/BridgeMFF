@@ -34,6 +34,7 @@ cd ..
 ## Fine-tuning a model
 1. Before fine-tuning, please make sure the last output layer should be normalized to 0 to 1! Pleause use gpu device.
 2. Prepare three datasets for visualization
+
 three_datasets_MFF
 ├─Lytro
 
@@ -53,10 +54,14 @@ three_datasets_MFF
 
 │  ├─B
 
+3. run
+   
 ```python
 python train_2.py --dataset_path='/tools/DUTS_MFF' --pretrained_model='./xxxx.pth'#your model path
 ```
 ## Predict using our model
+
+run
 
 ```python
 python predict.py --model_path='./generator.pth' --test_dataset_path=r'/three_datasets_MFF/Lytro'#Lytro
