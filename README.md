@@ -133,13 +133,31 @@ python predict.py --model_path='./generator.pth' --test_dataset_path='./three_da
 
 ## 📝 Citation
 
-If you find this work useful for your research, please consider citing our paper:
+If you find this work useful for your research, please consider citing our papers:
 ```bibtex
 @article{xie2024bridgemff,
   title={BridgeMFF: Bridging the semantic and texture gap via dual adversarial learning for multi-focus image fusion},
   author={Xie, Xinzhe and Guo, Buyu and Li, Peiliang and He, Shuangyan and Zhou, Sangjun},
   journal={},
   year={2024}
+}
+
+@article{xie2024swinmff,
+  title={SwinMFF: toward high-fidelity end-to-end multi-focus image fusion via swin transformer-based network},
+  author={Xie, Xinzhe and Guo, Buyu and Li, Peiliang and He, Shuangyan and Zhou, Sangjun},
+  journal={The Visual Computer},
+  pages={1--24},
+  year={2024},
+  publisher={Springer}
+}
+
+@inproceedings{xie2024underwater,
+  title={Underwater Three-Dimensional Microscope for Marine Benthic Organism Monitoring},
+  author={Xie, Xinzhe and Guo, Buyu and Li, Peiliang and Jiang, Qingyan},
+  booktitle={OCEANS 2024-Singapore},
+  pages={1--4},
+  year={2024},
+  organization={IEEE}
 }
 ```
 
