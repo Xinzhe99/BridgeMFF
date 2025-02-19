@@ -82,7 +82,23 @@ DUTS/
     └── DUTS-TR-Mask/
 ```
 
-2. Generate training data:
+2. Download test datasets (Lytro, MFFW, MFI-WHU): [Baidu Drive](https://pan.baidu.com/s/1234567) (Password: cite)
+
+Please organize the test datasets as follows:
+```
+three_datasets_MFF/
+├── Lytro/
+│   ├── A/
+│   └── B/
+├── MFFW/
+│   ├── A/
+│   └── B/
+└── MFI-WHU/
+    ├── A/
+    └── B/
+```
+
+3. Generate training data:
 ```bash
 cd ./tools
 # Generate training set
