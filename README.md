@@ -24,7 +24,7 @@ Official PyTorch implementation of ["BridgeMFF: Bridging the semantic and textur
 
 ## 👥 Authors
 
-**Xinzhe Xie** 👨‍🎓, **Buyu Guo**<sup>✉</sup> 👨‍🏫, **Peiliang Li** 👨‍🏫, **Shuangyan He** 👩‍🏫, **Sangjun Zhou** 👩‍🏫
+**Xinzhe Xie** 👨‍🎓, **Buyu Guo**<sup>✉</sup> 👨‍🏫, **Peiliang Li** 👨‍🏫, **Shuangyan He** 👩‍🏫, **Sangjun Zhou** 👩‍💼
 
 ### 🏛️ Institutions
 
