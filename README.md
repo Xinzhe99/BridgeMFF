@@ -135,12 +135,6 @@ python predict.py --model_path='./generator.pth' --test_dataset_path='./three_da
 
 If you find this work useful for your research, please consider citing our papers:
 ```bibtex
-@article{xie2024bridgemff,
-  title={BridgeMFF: Bridging the semantic and texture gap via dual adversarial learning for multi-focus image fusion},
-  author={Xie, Xinzhe and Guo, Buyu and Li, Peiliang and He, Shuangyan and Zhou, Sangjun},
-  journal={},
-  year={2024}
-}
 
 @article{xie2024swinmff,
   title={SwinMFF: toward high-fidelity end-to-end multi-focus image fusion via swin transformer-based network},
