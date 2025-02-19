@@ -82,7 +82,7 @@ DUTS/
     └── DUTS-TR-Mask/
 ```
 
-2. Download test datasets (Lytro, MFFW, MFI-WHU): [Baidu Drive](https://pan.baidu.com/s/1234567)](https://pan.baidu.com/s/1CoXbo4SLS1OLmuwXoA_mOQ?pwd=cite) (Password: cite)
+2. Download test datasets (Lytro, MFFW, MFI-WHU): [Baidu Drive](https://pan.baidu.com/s/1CoXbo4SLS1OLmuwXoA_mOQ?pwd=cite) (Password: cite)
 
 Please organize the test datasets as follows:
 ```
