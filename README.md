@@ -1,23 +1,69 @@
-# BridgeMFF
+██████╗ ██████╗ ██╗██████╗  ██████╗ ███████╗███╗   ███╗███████╗███████╗
+██╔══██╗██╔══██╗██║██╔══██╗██╔════╝ ██╔════╝████╗ ████║██╔════╝██╔════╝
+██████╔╝██████╔╝██║██║  ██║██║  ███╗█████╗  ██╔████╔██║█████╗  █████╗  
+██╔══██╗██╔══██╗██║██║  ██║██║   ██║██╔══╝  ██║╚██╔╝██║██╔══╝  ██╔══╝  
+██████╔╝██║  ██║██║██████╔╝╚██████╔╝███████╗██║ ╚═╝ ██║██║     ██║     
+╚═════╝ ╚═╝  ╚═╝╚═╝╚═════╝  ╚═════╝ ╚══════╝╚═╝     ╚═╝╚═╝     ╚═╝     
+```
+
+<div align="center">
+
 [![License: MIT](https://img.shields.io/badge/License-MIT-yellow.svg)](https://opensource.org/licenses/MIT)
 [![Python 3.8+](https://img.shields.io/badge/python-3.8+-blue.svg)](https://www.python.org/downloads/release/python-380/)
 [![PyTorch](https://img.shields.io/badge/PyTorch-%23EE4C2C.svg?style=flat&logo=PyTorch&logoColor=white)](https://pytorch.org/)
 
-Official PyTorch implementation of ["Multi-focus Image Fusion with Visual State Space Model and Dual Adversarial Learning"](paper_link)
+Official PyTorch implementation of ["BridgeMFF: Bridging the semantic and texture gap via dual adversarial learning for multi-focus image fusion"](paper_link)
 
-## Authors
-- Xinzhe Xie (xiexinzhe@zju.edu.cn)
-- Buyu Guo (guobuyuwork@163.com)
-- Peiliang Li (lipeiliang@zju.edu.cn) 
-- Shuangyan He (hesy103@163.com)
-- Sangjun Zhou (sjune163@163.com)
+</div>
 
-## Framework
-![image](https://github.com/Xinzhe99/BridgeMFF/assets/113503163/17d21d4f-720a-4472-92ac-0ba9e90eb935)
+## 📢 News
 
-## Performance
-Quantitative comparison on Lytro dataset:
-![image](https://github.com/Xinzhe99/BridgeMFF/assets/113503163/5751cc4c-e3d7-47b5-b401-a0dd557e1372)
+> [!NOTE]
+> 🎉 **2024.03**: Our paper has been submitted! Paper link coming soon.
+
+## 👥 Authors
+
+**Xinzhe Xie** 👨‍🎓, **Buyu Guo**<sup>✉</sup> 👨‍🏫, **Peiliang Li** 👨‍🏫, **Shuangyan He** 👩‍🏫, **Sangjun Zhou** 👨‍🏫
+
+### 🏛️ Institutions
+
+- Ocean College, Zhejiang University, Zhoushan, P. R. China
+- Hainan Institute, Zhejiang University, Sanya, P. R. China
+- Donghai Laboratory, Zhoushan, P. R. China
+
+<sup>✉</sup> Corresponding author: guobuyuwork@163.com
+
+## 📑 Table of Contents
+
+- [Overview](#-overview)
+- [Highlights](#-highlights)
+- [Installation](#-installation)
+- [Usage](#-usage)
+- [Results](#-results)
+- [Citation](#-citation)
+
+## 📖 Overview
+
+In recent years, the two-stage multi-focus image fusion (MFF) method has witnessed significant advancements. However, after supervised training, many networks become overly reliant on semantic information, making it challenging to discern whether homogeneous regions and flat regions are in focus or not. To alleviate this issue, we propose BridgeMFF, a novel multi-focus image fusion network applying a visual state space model and developing a general fine-tuning technique named BridgeTune, which bridges the semantic and texture gap via dual adversarial learning.
+
+<div align="center">
+<img src="https://github.com/Xinzhe99/BridgeMFF/assets/113503163/17d21d4f-720a-4472-92ac-0ba9e90eb935" width="800px"/>
+<p>Overview of BridgeMFF Framework</p>
+</div>
+
+## ✨ Highlights
+
+- 🔄 A fine-tuning approach BridgeTune for multi-focus image fusion
+- 🎯 A visual state space model-based fusion network BridgeMFF
+- ⚡ SOTA performance with highest efficiency (0.05M parameters, 0.09s per image pair)
+- 📊 Superior fusion quality especially in challenging homogeneous regions
+
+## 🚀 Performance
+
+<div align="center">
+<img src="https://github.com/Xinzhe99/BridgeMFF/assets/113503163/5751cc4c-e3d7-47b5-b401-a0dd557e1372" width="800px"/>
+<p>Quantitative comparison on Lytro dataset</p>
+</div>
 
 ## Installation
 ### Environment Setup
@@ -84,19 +130,17 @@ python predict.py --model_path='./generator.pth' --test_dataset_path='./three_da
 python predict.py --model_path='./generator.pth' --test_dataset_path='./three_datasets_MFF/MFI-WHU'
 ```
 
-## Citation
+## 📝 Citation
+
 If you find this work useful for your research, please consider citing our paper:
 ```bibtex
-@article{xie2024vssm,
-  title={Multi-focus Image Fusion with Visual State Space Model and Dual Adversarial Learning},
+@article{xie2024bridgemff,
+  title={BridgeMFF: Bridging the semantic and texture gap via dual adversarial learning for multi-focus image fusion},
   author={Xie, Xinzhe and Guo, Buyu and Li, Peiliang and He, Shuangyan and Zhou, Sangjun},
   journal={},
   year={2024}
 }
 ```
 
-## License
-This project is released under the [MIT License](LICENSE).
-
-## Acknowledgements
+## 🙏 Acknowledgements
 - [UltraLight-VM-UNet](https://github.com/wurenkai/UltraLight-VM-UNet)
