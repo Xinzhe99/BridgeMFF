@@ -20,11 +20,11 @@ Official PyTorch implementation of ["BridgeMFF: Bridging the semantic and textur
 ## 📢 News
 
 > [!NOTE]
-> 🎉 **2024.03**: Our paper has been submitted! Paper link coming soon.
+> 📝 **2024.03**: Our paper is currently under review. Paper link will be available upon acceptance.
 
 ## 👥 Authors
 
-**Xinzhe Xie** 👨‍🎓, **Buyu Guo**<sup>✉</sup> 👨‍🏫, **Peiliang Li** 👨‍🏫, **Shuangyan He** 👩‍🏫, **Sangjun Zhou** 👨‍🏫
+**Xinzhe Xie** 👨‍🎓, **Buyu Guo**<sup>✉</sup> 👨‍🏫, **Peiliang Li** 👨‍🏫, **Shuangyan He** 👩‍🏫, **Sangjun Zhou** 👩‍🏫
 
 ### 🏛️ Institutions
 
