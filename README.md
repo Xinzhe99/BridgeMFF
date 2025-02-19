@@ -1,76 +1,102 @@
-# BridgeMFF
-Code for “BridgeMFF: Bridging the semantic and texture gap via dual adversarial learning for multi-focus image fusion”
+# VSSM-MIF 
+[![License: MIT](https://img.shields.io/badge/License-MIT-yellow.svg)](https://opensource.org/licenses/MIT)
+[![Python 3.8+](https://img.shields.io/badge/python-3.8+-blue.svg)](https://www.python.org/downloads/release/python-380/)
+[![PyTorch](https://img.shields.io/badge/PyTorch-%23EE4C2C.svg?style=flat&logo=PyTorch&logoColor=white)](https://pytorch.org/)
+
+Official PyTorch implementation of ["Multi-focus Image Fusion with Visual State Space Model and Dual Adversarial Learning"](paper_link)
+
+## Authors
+- Xinzhe Xie (xiexinzhe@zju.edu.cn)
+- Buyu Guo (guobuyuwork@163.com)
+- Peiliang Li (lipeiliang@zju.edu.cn) 
+- Shuangyan He (hesy103@163.com)
+- Sangjun Zhou (sjune163@163.com)
+
 ## Framework
 ![image](https://github.com/Xinzhe99/BridgeMFF/assets/113503163/17d21d4f-720a-4472-92ac-0ba9e90eb935)
 
-## Performance on Lytro dataset
+## Performance
+Quantitative comparison on Lytro dataset:
 ![image](https://github.com/Xinzhe99/BridgeMFF/assets/113503163/5751cc4c-e3d7-47b5-b401-a0dd557e1372)
 
-## Preparing the virtual environment using conda
-Please refer [UltraLight-VM-UNet](https://github.com/wurenkai/UltraLight-VM-UNet)
-## Creating our training dataset
-1. Download [DUTS]([https://www.openai.com](http://saliencydetection.net/duts/)) dataset and put it in a folder ./xxxx/DUTS
-DUTS
+## Installation
+### Environment Setup
+We recommend using conda to manage the dependencies. Please refer to [UltraLight-VM-UNet](https://github.com/wurenkai/UltraLight-VM-UNet) for detailed environment setup.
 
-├─DUTS-TE
+### Dataset Preparation
+1. Download [DUTS](http://saliencydetection.net/duts/) dataset and organize it as follows:
+```
+DUTS/
+├── DUTS-TE/
+│   ├── DUTS-TE-Image/
+│   └── DUTS-TE-Mask/
+└── DUTS-TR/
+    ├── DUTS-TR-Image/
+    └── DUTS-TR-Mask/
+```
 
-│  ├─DUTS-TE-Image
-
-│  └─DUTS-TE-Mask
-
-└─DUTS-TR
-
-   ├─DUTS-TR-Image
-    
-   └─DUTS-TR-Mask
-    
-2. Unzip this project and run:
-```python
+2. Generate training data:
+```bash
 cd ./tools
-python make_datasets_DUTS.py --mode='TR' --data_root='/xxxx/DUTS' --out_dir_name='DUTS_MFF' #Training set
-python make_datasets_DUTS.py --mode='TE' --data_root='/xxxx/DUTS' --out_dir_name='DUTS_MFF' #Validation set
+# Generate training set
+python make_datasets_DUTS.py --mode='TR' --data_root='/path/to/DUTS' --out_dir_name='DUTS_MFF'
+# Generate validation set 
+python make_datasets_DUTS.py --mode='TE' --data_root='/path/to/DUTS' --out_dir_name='DUTS_MFF'
 cd ..
 ```
-## Pre-training a model
-1. Prepare three datasets for visualization
 
-three_datasets_MFF
-├─Lytro
-
-│  ├─A
-
-│  └─B
-
-├─MFFW
-
-│  ├─A
-
-│  └─B
-
-├─MFI-WHU
-
-│  ├─A
-
-│  ├─B
-
-```python
-python train_1.py --dataset_path='/tools/DUTS_MFF' --Visualization_datasets='/three_datasets_MFF'
+## Training
+### Pre-training
+1. Prepare visualization datasets:
+```
+three_datasets_MFF/
+├── Lytro/
+│   ├── A/
+│   └── B/
+├── MFFW/
+│   ├── A/
+│   └── B/
+└── MFI-WHU/
+    ├── A/
+    └── B/
 ```
 
-## Fine-tuning a model
-1. Before fine-tuning, please make sure the last output layer should be normalized to 0 to 1! Pleause use gpu device.
-
-2. run
-   
-```python
-python train_2.py --dataset_path='/tools/DUTS_MFF' --pretrained_model='/xxxx.pth' --Visualization_datasets='/three_datasets_MFF'
+2. Start pre-training:
+```bash
+python train_1.py --dataset_path='./tools/DUTS_MFF' --Visualization_datasets='./three_datasets_MFF'
 ```
-## Predict using our model
 
-run
+### Fine-tuning
+**Note**: Ensure the last output layer is normalized to [0,1] before fine-tuning. GPU is required.
 
-```python
-python predict.py --model_path='/generator.pth' --test_dataset_path=r'/three_datasets_MFF/Lytro'#Lytro
-python predict.py --model_path='/generator.pth' --test_dataset_path=r'/three_datasets_MFF/MFFW'#MFFW
-python predict.py --model_path='/generator.pth' --test_dataset_path=r'/three_datasets_MFF/MFI-WHU'#MFI-WHU
+```bash
+python train_2.py --dataset_path='./tools/DUTS_MFF' --pretrained_model='/path/to/pretrained.pth' --Visualization_datasets='./three_datasets_MFF'
 ```
+
+## Inference
+Test on different datasets:
+```bash
+# Test on Lytro
+python predict.py --model_path='./generator.pth' --test_dataset_path='./three_datasets_MFF/Lytro'
+# Test on MFFW
+python predict.py --model_path='./generator.pth' --test_dataset_path='./three_datasets_MFF/MFFW'
+# Test on MFI-WHU
+python predict.py --model_path='./generator.pth' --test_dataset_path='./three_datasets_MFF/MFI-WHU'
+```
+
+## Citation
+If you find this work useful for your research, please consider citing our paper:
+```bibtex
+@article{xie2024vssm,
+  title={Multi-focus Image Fusion with Visual State Space Model and Dual Adversarial Learning},
+  author={Xie, Xinzhe and Guo, Buyu and Li, Peiliang and He, Shuangyan and Zhou, Sangjun},
+  journal={},
+  year={2024}
+}
+```
+
+## License
+This project is released under the [MIT License](LICENSE).
+
+## Acknowledgements
+- [UltraLight-VM-UNet](https://github.com/wurenkai/UltraLight-VM-UNet)
