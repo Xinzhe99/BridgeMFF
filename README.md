@@ -82,8 +82,7 @@ DUTS/
     └── DUTS-TR-Mask/
 ```
 
-2. Download test datasets (Lytro, MFFW, MFI-WHU): [Baidu Drive](https://pan.baidu.com/s/12wQqZJiPJpZlcZNoz6vinw)(Password: 8888)
-Please organize the test datasets as follows:
+2. Organize the test datasets as follows:
 ```
 three_datasets_MFF/
 ├── Lytro/
