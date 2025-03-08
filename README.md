@@ -20,7 +20,7 @@ Official PyTorch implementation of ["Multi-focus Image Fusion with Visual State 
 ## 📢 News
 
 > [!NOTE]
-> 📝 **2024.03**: Our paper is currently under review. Paper link will be available upon acceptance.
+> 📝 **2024.03**: Our paper is accepted by the Computers and Electrical Engineering~
 
 ## 👥 Authors
 
