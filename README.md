@@ -149,6 +149,16 @@ python predict.py --model_path='./generator.pth' --test_dataset_path='./three_da
 
 If you find this work useful for your research, please consider citing our papers:
 ```bibtex
+@article{xie2025stackmff,
+  title={StackMFF: end-to-end multi-focus image stack fusion network},
+  author={Xie, Xinzhe and Qingyan, Jiang and Chen, Dong and Guo, Buyu and Li, Peiliang and Zhou, Sangjun},
+  journal={Applied Intelligence},
+  volume={55},
+  number={6},
+  pages={503},
+  year={2025},
+  publisher={Springer}
+}
 
 @article{xie2024swinmff,
   title={SwinMFF: toward high-fidelity end-to-end multi-focus image fusion via swin transformer-based network},
@@ -157,6 +167,19 @@ If you find this work useful for your research, please consider citing our paper
   pages={1--24},
   year={2024},
   publisher={Springer}
+}
+@article{XIE2025110238,
+title = {Multi-focus image fusion with visual state space model and dual adversarial learning},
+journal = {Computers and Electrical Engineering},
+volume = {123},
+pages = {110238},
+year = {2025},
+issn = {0045-7906},
+doi = {https://doi.org/10.1016/j.compeleceng.2025.110238},
+url = {https://www.sciencedirect.com/science/article/pii/S0045790625001818},
+author = {Xinzhe Xie and Buyu Guo and Peiliang Li and Shuangyan He and Sangjun Zhou},
+keywords = {Deep learning, Multi-focus image fusion, Adversarial learning, Fine-tuning technology, Visual state space model},
+abstract = {In recent years, the two-stage multi-focus image fusion (MFF) method, which utilizes neural networks to first generate decision maps and then calculate the fused image, has witnessed significant advancements. However, after supervised training, many networks become overly reliant on semantic information, making it challenging to discern whether homogeneous regions and flat regions are in focus or not, as these regions lack distinct blur cues. To alleviate this issue, this paper proposes a multi-focus image fusion network named BridgeMFF by applying a visual state space model and developing a general fine-tuning technique named BridgeTune, which bridges the semantic and texture gap via dual adversarial learning. By fine-tuning the entire network in an adversarial manner, decision maps are generated to synthesize clear and blurred images with probability density distributions closely approximating real ones, thereby implicitly learning local spatial patterns and statistical properties of pixel values. Extensive experiments demonstrate that the proposed BridgeMFF achieves superior fusion quality, especially in challenging homogeneous regions. Moreover, BridgeMFF has the smallest model size (0.05M) and fastest processing speed (0.09s per image pair), enabling real-time fusion applications. The codes are available at https://github.com/Xinzhe99/BridgeMFF.}
 }
 
 @inproceedings{xie2024underwater,
@@ -168,6 +191,7 @@ If you find this work useful for your research, please consider citing our paper
   organization={IEEE}
 }
 ```
+
 ## 🙏 Acknowledgements
 This work was supported by the Hainan Provincial Joint Project of Sanya Yazhou Bay Science and Technology City (No: 2021JJLH0079), Innovational Fund for Scientific and Technological Personnel of Hainan Province (NO. KJRC2023D19), and the Hainan Provincial Joint Project of Sanya Yazhou Bay Science and Technology City (No. 2021CXLH0020).
 
