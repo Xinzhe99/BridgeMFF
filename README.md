@@ -168,6 +168,7 @@ If you find this work useful for your research, please consider citing our paper
   year={2024},
   publisher={Springer}
 }
+
 @article{XIE2025110238,
 title = {Multi-focus image fusion with visual state space model and dual adversarial learning},
 journal = {Computers and Electrical Engineering},
