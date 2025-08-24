@@ -119,7 +119,7 @@ python train_1.py --dataset_path='./tools/DUTS_MFF' --Visualization_datasets='./
 python train_2.py --dataset_path='./tools/DUTS_MFF' --pretrained_model='/path/to/pretrained.pth' --Visualization_datasets='./three_datasets_MFF'
 ```
 
-## Inference
+## Usage
 Test on different datasets:
 ```bash
 # Test on Lytro
@@ -129,6 +129,9 @@ python predict.py --model_path='./generator.pth' --test_dataset_path='./three_da
 # Test on MFI-WHU
 python predict.py --model_path='./generator.pth' --test_dataset_path='./three_datasets_MFF/MFI-WHU'
 ```
+
+## Results
+You can download the results of three test datasets (Lytro, MFFW, MFI-WHU, Road-MF) from this [link](https://pan.baidu.com/s/1Sglizmswb8RMGE0J5ihdXg?pwd=cite)
 
 ## 📝 Citation
 
