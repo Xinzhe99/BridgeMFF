@@ -44,7 +44,6 @@ Official PyTorch implementation of ["Multi-focus Image Fusion with Visual State 
 - [🚀 Usage](#-usage)
 - [📊 Results](#-results)
 - [📝 Citation](#-citation)
-- [🙏 Acknowledgements](#-acknowledgements)
 
 ## 📖 Overview
 
