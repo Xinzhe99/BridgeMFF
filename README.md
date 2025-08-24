@@ -28,20 +28,23 @@ Official PyTorch implementation of ["Multi-focus Image Fusion with Visual State 
 
 ### 🏛️ Institutions
 
-- Ocean College, Zhejiang University, Zhoushan, P. R. China
-- Hainan Institute, Zhejiang University, Sanya, P. R. China
-- Donghai Laboratory, Zhoushan, P. R. China
-
-<sup>✉</sup> Corresponding author: guobuyuwork@163.com
+- Zhejiang University
+- Hainan Institute, Zhejiang University
+- Donghai Laboratory
 
 ## 📑 Table of Contents
 
-- [Overview](#-overview)
-- [Highlights](#-highlights)
-- [Installation](#-installation)
-- [Usage](#-usage)
-- [Results](#-results)
-- [Citation](#-citation)
+- [📢 News](#-news)
+- [👥 Authors](#-authors)
+- [📖 Overview](#-overview)
+- [✨ Highlights](#-highlights)
+- [🚀 Performance](#-performance)
+- [⚙️ Installation](#-installation)
+- [🎯 Training](#-training)
+- [🚀 Usage](#-usage)
+- [📊 Results](#-results)
+- [📝 Citation](#-citation)
+- [🙏 Acknowledgements](#-acknowledgements)
 
 ## 📖 Overview
 
@@ -66,7 +69,7 @@ In recent years, the two-stage multi-focus image fusion (MFF) method, which util
 <p>Quantitative comparison on Lytro dataset</p>
 </div>
 
-## Installation
+## ⚙️ Installation
 ### Environment Setup
 We recommend using conda to manage the dependencies. Please refer to [UltraLight-VM-UNet](https://github.com/wurenkai/UltraLight-VM-UNet) for detailed environment setup.
 
@@ -106,7 +109,7 @@ python make_datasets_DUTS.py --mode='TE' --data_root='/path/to/DUTS' --out_dir_n
 cd ..
 ```
 
-## Training
+## 🎯 Training
 ### Pre-training
 ```bash
 python train_1.py --dataset_path='./tools/DUTS_MFF' --Visualization_datasets='./three_datasets_MFF'
@@ -119,7 +122,7 @@ python train_1.py --dataset_path='./tools/DUTS_MFF' --Visualization_datasets='./
 python train_2.py --dataset_path='./tools/DUTS_MFF' --pretrained_model='/path/to/pretrained.pth' --Visualization_datasets='./three_datasets_MFF'
 ```
 
-## Usage
+## 🚀 Usage
 Test on different datasets:
 ```bash
 # Test on Lytro
@@ -130,7 +133,7 @@ python predict.py --model_path='./generator.pth' --test_dataset_path='./three_da
 python predict.py --model_path='./generator.pth' --test_dataset_path='./three_datasets_MFF/MFI-WHU'
 ```
 
-## Results
+## 📊 Results
 You can download the results of three test datasets (Lytro, MFFW, MFI-WHU, Road-MF) from this [link](https://pan.baidu.com/s/1Sglizmswb8RMGE0J5ihdXg?pwd=cite)
 
 ## 📝 Citation
