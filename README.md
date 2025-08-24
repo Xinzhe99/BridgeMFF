@@ -184,6 +184,4 @@ abstract = {In recent years, the two-stage multi-focus image fusion (MFF) method
 }
 ```
 
-## 🙏 Acknowledgements
-This work was supported by the Hainan Provincial Joint Project of Sanya Yazhou Bay Science and Technology City (No: 2021JJLH0079), Innovational Fund for Scientific and Technological Personnel of Hainan Province (NO. KJRC2023D19), and the Hainan Provincial Joint Project of Sanya Yazhou Bay Science and Technology City (No. 2021CXLH0020).
 
