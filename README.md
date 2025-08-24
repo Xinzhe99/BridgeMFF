@@ -108,21 +108,6 @@ cd ..
 
 ## Training
 ### Pre-training
-1. Prepare visualization datasets:
-```
-three_datasets_MFF/
-├── Lytro/
-│   ├── A/
-│   └── B/
-├── MFFW/
-│   ├── A/
-│   └── B/
-└── MFI-WHU/
-    ├── A/
-    └── B/
-```
-
-2. Start pre-training:
 ```bash
 python train_1.py --dataset_path='./tools/DUTS_MFF' --Visualization_datasets='./three_datasets_MFF'
 ```
